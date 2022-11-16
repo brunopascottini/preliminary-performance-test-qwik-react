@@ -1,0 +1,25 @@
+{
+	"name": "react-hmr",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "concurrently \"vite\" \"node coldStart.js\"",
+		"build": "concurrently \"vite build && node buildEnd.js\" \"node buildTime.js\"",
+		"preview": "vite preview",
+		"watch": "node ./watch",
+		"generate": "node ./genFiles"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	},
+	"devDependencies": {
+		"@types/react": "^18.0.22",
+		"@types/react-dom": "^18.0.7",
+		"concurrently": "^7.5.0",
+		"vite": "^3.2.0",
+		"vite-plugin-swc-react-refresh": "^2.2.0"
+	}
+}
+
